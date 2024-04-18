@@ -13,7 +13,7 @@ Auxiliary script to remove Sequences with Non-IUPAC characters in multifasta fil
 #### Introduction 
 
 A common issue derived from poorly annotated genomes is that resulting proteomes may come with characters that do not correspond to actual amino acids commonly found in natural proteins (what we define here as non-IUPAC characters). 
-The most common scenario is the low definition of bases in the genome, typically annotated as nucleotide "N", for which translation of the predicted coding sequence may lead to an undefined residue, often times represented with symbol "X" in the protein sequence. 
+The most common scenario is the low definition of bases in the genome, typically annotated as nucleotide "N", for which translation of the predicted coding sequence may lead to an undefined residue, often times represented with symbol "X" in the protein sequence. Also "U" character for selenocystein is a typically occurring non natural amino acid that falls in our category of non-IUPAC (as well as "B" for Asp/Asn, or "Z" for Glu/Gln).  
 
 Some downstream applications (even MSA generation, profile to sequence comparisons, and even phylogeny reconstruction) can't deal with for non-IUPAC characters, and results are compromised. Moreover, some proteomes show a high "contamination" with non-IUPAC annotations, making this a problem that can easily become a nuissance. In addition, stop codon character * is typically found in complete proteome annotations, and can also interfere with several downstream applications.  
 
