@@ -1,8 +1,11 @@
+[![DOI](https://zenodo.org/badge/788514656.svg)](https://zenodo.org/doi/10.5281/zenodo.10994866)
+
 # Sequence Non-IUPAC Purge script (SNIP)
 Auxiliary script to remove Sequences with Non-IUPAC characters in multifasta file(s)
 
-- [SNIP](#snip)
-    - [Introduction](#Introduction)
+- [Sequence Non-IUPAC Purge script (SNIP)](#sequence-non-iupac-purge-script-snip)
+ 
+    - [Introduction](#introduction)
     - [Requirements](#requirements)
     - [Single fasta file](#single-fasta-file)
     - [Multiple fasta files](#multiple-fasta-files)
