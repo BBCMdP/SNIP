@@ -1,3 +1,5 @@
+# Sequence Non-IUPAC Purge script (SNIP)
+
 - [SNIP](#snip)
       - [Accesory script to remove Sequences with Non-IUPAC characters in multifasta file(s)](#accesory-script-to-remove-sequences-with-non-iupac-characters-in-multifasta-files)
     - [Requirements](#requirements)
