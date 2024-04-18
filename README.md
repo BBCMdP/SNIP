@@ -1,13 +1,14 @@
 # Sequence Non-IUPAC Purge script (SNIP)
+Auxiliary script to remove Sequences with Non-IUPAC characters in multifasta file(s)
 
 - [SNIP](#snip)
-      - [Accesory script to remove Sequences with Non-IUPAC characters in multifasta file(s)](#accesory-script-to-remove-sequences-with-non-iupac-characters-in-multifasta-files)
+    - [Introduction](#Introduction)
     - [Requirements](#requirements)
     - [Single fasta file](#single-fasta-file)
     - [Multiple fasta files](#multiple-fasta-files)
 
 
-#### Auxiliary script to remove Sequences with Non-IUPAC characters in multifasta file(s) 
+#### Introduction 
 
 A common issue derived from poorly annotated genomes is that resulting proteomes may come with characters that do not correspond to actual amino acids commonly found in natural proteins (what we define here as non-IUPAC characters). 
 The most common scenario is the low definition of bases in the genome, typically annotated as nucleotide "N", for which translation of the predicted coding sequence may lead to an undefined residue, often times represented with symbol "X" in the protein sequence. 
