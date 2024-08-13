@@ -47,7 +47,7 @@ Finally, if neither non-IUPAC or terminal stop codon characters are found, only 
 ### Multiple fasta files
 SNIP can be applied to multiple fasta files. The only requirements are that all files should (i) be in the same folder, and (ii) have the same extension. For example, can be run like this: 
 
-`python3 SNIP.py -m '*.fa`  
+`python3 SNIP.py -m '*.fa'`  
 
 in a folder with five fasta files with the provided extension:
 
