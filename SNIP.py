@@ -132,7 +132,7 @@ if ext != "" and single_file == None:
         print("No files found with the extension provided.")
         exit()
     out_f = open("Report_multiple_files.tsv", "w")
-    out_f.write("File\tTotal_Seqs\tSeqs_accepted\tSeqs_removed\tterm_*\n")
+    out_f.write("File\tTotal_Seqs\tSeqs_accepted\tSeqs_removed\tterm_*\tOutput_File\n")
     
     for fasta in list_of_fastas:
         real_fasta = str((fasta.split(".")[:-1])[0])
@@ -188,6 +188,15 @@ if ext != "" and single_file == None:
                 f3.write(str(seqs_a) + "\n")
             f3.close()
         term_SC = "yes" if changes_made else "no"
-        out_f.write(str(fasta) + "\t" + str(len(names)) + "\t" + str(len(good_seqs_n)) + "\t" + str(len(bad_seqs_n)) + "\t" + term_SC + "\n")
+        # Determine which output file was actually created
+        if len(bad_seqs_n) > 0:
+            output_file = accepted_file  # _accepted file is created when sequences are removed
+        elif changes_made:
+            output_file = accep_file_prepr  # _nsc file is created when stop codons are removed
+        else:
+            output_file = f"./Seqs_Accepted/{os.path.basename(fasta)}"  # Original file is copied
+
+        # Write to report
+        out_f.write(f'{fasta}\t{len(names)}\t{len(good_seqs_n)}\t{len(bad_seqs_n)}\t{term_SC}\t{os.path.basename(output_file)}\n')
     
     out_f.close()
