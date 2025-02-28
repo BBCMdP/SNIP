@@ -37,7 +37,7 @@ def seqs_extractor(fasta_file):
     names = []
     seqs = []
     for seq_record in SeqIO.parse(fasta_file, "fasta"):
-        names.append(seq_record.id)
+        names.append(seq_record.description)
         seqs.append(seq_record.seq)
     return names, seqs
 
@@ -135,7 +135,7 @@ if ext != "" and single_file == None:
     out_f.write("File\tTotal_Seqs\tSeqs_accepted\tSeqs_removed\tterm_*\tOutput_File\n")
     
     for fasta in list_of_fastas:
-        real_fasta = str((fasta.split(".")[:-1])[0])
+        real_fasta = ".".join(fasta.split(".")[:-1])
         names, seqs = seqs_extractor(fasta)
         # Preprocess sequences: remove trailing whitespace and asterisks
         original_seqs = seqs.copy()
