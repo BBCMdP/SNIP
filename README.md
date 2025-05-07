@@ -76,3 +76,5 @@ The `Report_multiple_files.tsv` summarizes the results, for example:
 The user can identify here that for input file `crh.fa` has 19527 seqs, of which 13 have non-IUPAC characters (and are removed), and terminal stop codon characters were found. Thus, `crh_accepted.fa` and `crh_removed.fa` files are created and saved in the proper folder. The same goes for `smu.fa` (note that around 10% of the sequences have non-IUPAC characters) and `tpl.fa`. 
 The case of `cri.fa` will result in a file `cri_nsc.fa`, since there were no sequences with non-IUPAC characters, but terminal stop codons were found. 
 Finally, a copy of `sfa.fa` will be found in the `/Seqs_Accepted` folder, since neither non-IUPAC or terminal stop codons were found. 
+
+Note that the script also supports gzipped fasta files. In this case, the flag ``--gz`` must be used. The script will process the files in the same manner, with the exception that the ouput files will be gzipped as well. 
